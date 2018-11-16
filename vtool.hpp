@@ -4,13 +4,13 @@
 
 #include <stdio.h>
 
-#ifdef _cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
 int filesize(const char *filename);
 
-#ifdef _cplusplus
+#ifdef __cplusplus
 }
 #endif
 
