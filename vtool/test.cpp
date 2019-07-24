@@ -7,6 +7,9 @@
 #include "vBufferByte.hpp"
 #include "vArray2D.hpp"
 
+#include <thread>
+#include "vThreadSet.hpp"
+
 void test_vBufferBlock() {
     std::cout<<__FUNCTION__<<std::endl;
 
@@ -70,8 +73,19 @@ void test_vArray2D() {
     vArray2DFree<int>(data,row,col);
 }
 
+void test_vThreadSet() {
+    //vGetThreadCpu();
+    //vSetThreadCpu(10);
+    //vGetThreadCpu();
+    
+    vGetThreadPriority();
+    vSetThreadPriority(50);
+    vGetThreadPriority();
+}
+
 int main(int argc,char* argv[]) {
     //test_vBufferBlock();
     //test_vBufferByte();
-    test_vArray2D();
+    //test_vArray2D();
+    test_vThreadSet();
 }
